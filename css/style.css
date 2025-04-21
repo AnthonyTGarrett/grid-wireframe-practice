@@ -1,0 +1,71 @@
+@import url(reset.css);
+
+* {
+  border-radius: 10px;
+}
+
+html {
+  font-size: 10px;
+}
+
+h1,
+h2 {
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+body {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #b1b5be;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+header {
+  background-color: #9f2063;
+}
+
+header,
+aside,
+article {
+  padding: 0.3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 10% 60% 10% 10%;
+  padding: 2rem;
+  row-gap: 1.8rem;
+}
+
+.article-container {
+  background-color: #21b879;
+  padding: 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 2rem;
+}
+
+article {
+  background-color: #e4195b;
+  padding: 2.5rem 2rem;
+}
+
+article p {
+  font-size: 2.6rem;
+}
+
+aside:first-of-type {
+  background-color: #116395;
+}
+
+aside:last-of-type {
+  background-color: #25a4b5;
+}
+
+footer {
+  background-color: #e06b26;
+}
