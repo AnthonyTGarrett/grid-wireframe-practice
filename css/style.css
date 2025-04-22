@@ -19,7 +19,13 @@ body {
   text-transform: uppercase;
   background-color: #b1b5be;
   text-align: center;
-  font-size: 1.4rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  row-gap: 1.8rem;
 }
 
 header {
@@ -28,25 +34,17 @@ header {
 
 header,
 aside,
-article {
+footer {
   padding: 0.3rem;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 10% 10% 60% 10% 10%;
-  padding: 2rem;
-  row-gap: 1.8rem;
-}
-
 .article-container {
-  background-color: #21b879;
-  padding: 2rem 2.5rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 2rem;
+  background-color: #21b879;
+  padding: 2rem 2.5rem;
 }
 
 article {
@@ -55,7 +53,7 @@ article {
 }
 
 article p {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
 }
 
 aside:first-of-type {
