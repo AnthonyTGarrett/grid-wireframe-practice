@@ -24,8 +24,18 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
   padding: 2rem;
   row-gap: 1.8rem;
+  height: 100vh;
+}
+
+.middle-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 7fr 1fr;
+  row-gap: 1.8rem;
+  height: 100%;
 }
 
 header {
@@ -50,6 +60,12 @@ footer {
 article {
   background-color: #e4195b;
   padding: 2.5rem 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.article-container h2 {
+  display: none;
 }
 
 article p {
@@ -66,4 +82,44 @@ aside:last-of-type {
 
 footer {
   background-color: #e06b26;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    height: 100vh;
+  }
+  .middle-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0.8rem;
+  }
+
+  .article-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+  }
+
+  h1,
+  h2 {
+    font-weight: 400;
+  }
+
+  article {
+    grid-row: 5 / 6;
+  }
+
+  .article-container h2 {
+    display: block;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    align-self: end;
+  }
+
+  aside {
+    display: grid;
+    place-content: center;
+  }
 }
